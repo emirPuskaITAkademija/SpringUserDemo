@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -26,6 +28,10 @@ public class User implements Serializable {
 
     @Column(name = "age")
     private Integer age;
+
+    @JoinColumn(name = "id_privilege", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Privilege privilege;
 
     public User() {
     }
@@ -68,6 +74,14 @@ public class User implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Privilege getPrivilege() {
+        return privilege;
+    }
+
+    public void setPrivilege(Privilege privilege) {
+        this.privilege = privilege;
     }
 
     @Override

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first JS program</title>
+</head>
+<body>
+
+<button type="button" onclick="prikaziSliku()">Prikazi sliku kao BLOCK</button>
+<button type="button" onclick="document.getElementById('naslov').innerHTML='Danas ćemo reći da je bio divan dan'">
+    Promijeni stanje današnjeg dana
+</button>
+<button type="button" onclick="sakrijSliku()">Sakrij sliku</button>
+<button type="button" onclick="document.getElementById('slika').style.display='inline'">Prikazi</button>
+<h1 id="naslov">Danas je kiša padala</h1>
+
+<button onclick="document.getElementById('slika').src='turn_on.jpg'">Turn ON</button>
+<img src="turn_off.jpg" id="slika" style="width: 100px;">
+<button onclick="document.getElementById('slika').src='turn_off.jpg'">Turn OFF</button>
+<script src="kolega.js"></script>
+</body>
+</html>
